@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Error Page</title>
+    <!-- INCLUDE CSS -->
+    <%- include('./partials/maincss.ejs') %>
+    <style>
+        .select2-container--default .select2-selection--single .select2-selection__rendered{
+            margin: -5px;
+        }
+        .select2-container--default .select2-selection--single{
+            height: 36px;
+        }
+        .page-item.active .page-link {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+        .page-link {
+            color: #17a2b8;
+        }
+        .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[aria-selected]:hover{
+            background-color: #17a2b8;
+        }
+        a {
+            color: #17a2b8;
+        }
+        a:hover{
+            color: #178c9e;
+        }
+    </style>
+    <!-- END CSS -->
+    </head>
+    
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper">
+        
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item logout-link">
+                    <a class="nav-link" href="/log-out" role="button" title="Log Out">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- INCLUDE SIDEBAR -->
+        <aside class="main-sidebar sidebar-light-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="/" class="brand-link">
+                <img src="/images/egogo-logo.png" alt="Egogo" class="" style="opacity: .8; width: 100%;">
+                <span class="brand-text font-weight-light"></span>
+            </a>
+        
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">  
+                    <div class="info">
+                        <a href="#" class="d-block">
+                            <br>
+                            <small>28 Jul 2022 12:38:43</small>
+                            <br>
+                        </a>
+                    </div>
+                </div>
+                <!-- Sidebar Menu -->
+                 <!-- Sidebar Menu -->
+                 <%- include('./partials/sidemenu.ejs') %>
+                 <!-- /.sidebar-menu -->
+            <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- END SIDEBAR -->
+        
+        <!-- START CONTENT -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Error Page</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item active">Error Page</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+            
+            <!-- Main content -->
+            <section class="content">
+                <div class="error-page">                    
+                    <div class="error-content" style="margin-left: 0px !important;">
+                        <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Something Wrong.</h3>
+                        
+                        <p><%=message%></p>
+                    
+                        <div class="col-md-12" style="margin-top: 10px;margin-left: -10px;">
+                            <button onclick="history.back()" type="button" class="btn btn-primary btn-back"><i class="fas fa-arrow-left"></i> Back To Previous Page</button>
+                        </div>
+                    </div>
+                    <!-- /.error-content -->
+                </div>
+                <!-- /.error-page -->
+            </sectiosn>
+              <!-- /.content -->
+        </div>
+        <!-- END CONTENT -->
+        
+        <!-- INCLUDE FOOTER -->
+        <%- include('./partials/mainfooter.ejs') %>
+        <!-- END FOOTER -->
+        
+        <!-- JAVASCRIPT -->
+        <%- include('./partials/mainjs.ejs') %>
+    </body>
+</html>

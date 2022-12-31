@@ -1,0 +1,23 @@
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+
+<script>
+    var url = window.location;
+    const allLinks = document.querySelectorAll('.nav-item a');
+    const currentLink = [...allLinks].filter(e => {
+        return e.href == url;
+    });
+    currentLink[0].classList.add("active")
+    currentLink[0].closest(".nav-treeview").style.display = "block";
+    currentLink[0].closest(".has-treeview").classList.add("active");
+</script>
+
+<script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
+
+         

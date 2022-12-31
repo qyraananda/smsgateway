@@ -3,19 +3,11 @@ const mysql2Timeout = require('mysql2-timeout-additions');
 
 var con = mysql.createPool({
     connectionLimit: 100,
-    host: "35.186.154.57",
-    user: "egogo",
-    password: "3g0g0it",
+    host: "localhost",
+    user: "usergammu",
+    password: "password321",
     database: "gammu"
 });
-
-// var con = mysql.createPool({
-//     connectionLimit: 100,
-//     host: "localhost",
-//     user: "usergammu",
-//     password: "password321",
-//     database: "gammu"
-// });
 
 const promisePool = con.promise();
 
